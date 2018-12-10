@@ -1,0 +1,93 @@
+.main-navigation
+    display flex
+    margin 0
+
+    ul
+        display flex
+
+        @media todesktop
+            flex-direction column
+
+    li
+        position relative
+        //flex 1
+
+        > ul
+            display none
+
+        @media todesktop
+            &.show > ul
+                display block
+
+        @media fromtablet
+            &:hover > ul
+                display block
+
+    nav
+        @media todesktop
+            &:not(.show)
+                display none
+
+    .submenu-toggle
+        @media fromtablet
+            display none
+
+    @media fromtablet
+        li
+            > ul
+                position absolute
+                top 100%
+                z-index 1
+                width 100%
+                min-width 15vw
+                li > ul
+                    top 0
+
+            &:not(:last-child)
+                > ul
+                    left 0
+                    li > ul
+                        right auto
+                        left 100%
+
+                        li > ul
+                            right 100%
+                            left auto
+
+                            li > ul
+                                right auto
+                                left 100%
+
+                                li > ul
+                                    right 100%
+                                    left auto
+
+            &:last-child
+                > ul
+                    right 0
+                    li > ul
+                        left auto
+                        right 100%
+
+                        li > ul
+                            left 100%
+                            right auto
+
+                            li > ul
+                                left auto
+                                right 100%
+
+                                li > ul
+                                    left 100%
+                                    right auto
+
+
+    // generateSubmenu(i, isReversed = false)
+    //     if i > 0
+    //         > li > ul
+    //             left isReversed ? auto : 100%
+    //             right isReversed ? 100% : auto
+    //             generateSubmenu(i - 1, !isReversed)
+
+    // li > ul
+    //     generateSubmenu(10)

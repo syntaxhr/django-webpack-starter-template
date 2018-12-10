@@ -1,0 +1,88 @@
+html
+    box-sizing border-box
+
+*, *::before, *::after
+    box-sizing inherit
+
+body
+    min-height 150vh
+    display flex
+    flex-direction column
+    justify-content space-between
+    font-family: 'Roboto Condensed', sans-serif;
+
+main
+    flex 1
+    display flex
+    flex-direction column
+    align-items center
+
+ul
+    padding-left 0
+    list-style none
+    font-size 16px
+    font-weight 500
+    line-height 1.5
+
+a
+    text-decoration none
+    color primary-color
+    transition all .2s
+
+    &:visited
+        text-decoration none
+    &:hover
+        text-decoration underline
+        transition all .2s
+    &:focus
+        text-decoration none
+    &:active
+        text-decoration none
+
+p
+    font-size 16px
+    font-weight 500
+    line-height 1.5
+
+img
+    max-width 100%
+
+h1
+    font-size 2em
+    text-transform uppercase
+
+h1, h2, h3, h4, h5, h6
+    color dark-text-color
+
+    a
+        text-decoration none
+        color dark-text-color
+
+        &:hover
+            text-decoration none
+            color primary-color
+
+.container
+    max-width container-width
+    margin-left auto
+    margin-right auto
+
+.content
+    max-width content-width
+    margin-left auto
+    margin-right auto
+    padding-bottom 60px
+
+    @media todesktop
+        width 90%
+        padding-bottom 0
+
+    img
+        width 100%
+
+    ul
+        padding-left 20px
+        list-style circle
+
+    a
+        font-weight 500

@@ -1,0 +1,38 @@
+{
+    "private": true,
+    "scripts": {
+        "debug": "webpack --env analysis --progress --display-error-details",
+        "build": "webpack --env production --progress",
+        "start": "webpack-dev-server"
+    },
+    "dependencies": {
+        "@babel/core": "^7.0.0-beta.53",
+        "@babel/plugin-proposal-class-properties": "^7.0.0-beta.53",
+        "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.53",
+        "@babel/preset-env": "^7.0.0-beta.53",
+        "autoprefixer": "^8.6.5",
+        "babel-loader": "^8.0.0-beta.4",
+        "babel-polyfill": "^6.26.0",
+        "compression-webpack-plugin": "^1.1.11",
+        "css-loader": "^1.0.0",
+        "file-loader": "^1.1.11",
+        "font-awesome": "^4.7.0",
+        "image-webpack-loader": "^4.3.1",
+        "livereload": "^0.7.0",
+        "mini-css-extract-plugin": "^0.4.1",
+        "normalize.css": "^8.0.0",
+        "optimize-css-assets-webpack-plugin": "^4.0.3",
+        "postcss": "^6.0.23",
+        "postcss-loader": "^2.1.6",
+        "style-loader": "^0.21.0",
+        "stylus": "^0.54.5",
+        "stylus-loader": "^3.0.2",
+        "swiper": "^4.4.2",
+        "webpack": "^4.16.0",
+        "webpack-bundle-analyzer": "^2.13.1",
+        "webpack-bundle-tracker": "^0.3.0",
+        "webpack-cleanup-plugin": "^0.5.1",
+        "webpack-cli": "^3.0.8",
+        "webpack-dev-server": "^3.1.4"
+    }
+}

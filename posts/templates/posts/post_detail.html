@@ -1,0 +1,12 @@
+{% extends 'posts/content.html' %}
+{% load cms_tags sekizai_tags menu_tags i18n thumbnail %}
+
+{% block posts_content %}
+
+<div>
+    <h1>Post detail</h1>
+    <h1>{{ post.title }}</h1>
+    {% render_placeholder post.content %}
+</div>
+
+{% endblock %}

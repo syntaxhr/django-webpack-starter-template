@@ -1,0 +1,13 @@
+{% load i18n static thumbnail %}
+
+<div class="swiper-slide">
+    <div class="swiper-slide__content">
+        <div class="swiper-slide__image"
+             style="background-image: url('{% thumbnail instance.image 400x400 crop upscale %}')">
+            <img src="{% thumbnail instance.image 600x600 crop upscale %}" alt="{{ instance.title }}">
+        </div>
+        <div class="swiper-slide__text">
+            {{ instance.content_html|safe }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<section>
+    <h1>{{ instance.section }}</h1>
+    <div class="container">
+        {% for post in posts %}
+        <article>
+            <div>
+                <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+                <div><span>{{ post.get_formatted_date }}</span></div>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>

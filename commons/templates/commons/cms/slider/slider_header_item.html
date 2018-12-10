@@ -1,0 +1,14 @@
+{% load i18n static thumbnail %}
+
+<div class="swiper-slide" style="background-image: url('{% thumbnail instance.image 1920x1080 crop %}')">
+    <div class="swiper-slide__content">
+        <div class="swiper-slide__text">
+            {{ instance.content_html|safe }}
+        </div>
+        <div class="swiper-slide__link">
+            {% if instance.link %}
+                <a href="{{ instance.link }}" class="btn btn-primary">{% trans 'Read more' %}</a>
+            {% endif %}
+        </div>
+    </div>
+</div>

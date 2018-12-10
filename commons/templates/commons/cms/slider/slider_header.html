@@ -1,0 +1,36 @@
+{% load cms_tags static %}
+
+<section class="slider header-slider">
+        <div class="slider__wrapper">
+            <!-- Slider main container -->
+            <div class="swiper-container" id="{{ instance.id }}">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    {% for plugin in instance.child_plugin_instances %}
+                        {% render_plugin plugin %}
+                    {% endfor %}
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-nav prev" id="{{ instance.id }}prev"><img src="{% static 'images/icons/navigation/chevron-primary-left.png' %}" alt="Icon left"></div>
+            <div class="swiper-nav next" id="{{ instance.id }}next"><img src="{% static 'images/icons/navigation/chevron-primary-right.png' %}" alt="Icon right"></div>
+
+
+        </div>
+</section>
+
+{% block extra_scripts %}
+    <script>
+        {# We need to wait for main js to be ready #}
+        document.addEventListener("DOMContentLoaded", function (event) {
+            render_slider({
+                name: "#{{ instance.id }}",
+                slidesPerView: 1,
+            });
+        });
+    </script>
+{% endblock %}

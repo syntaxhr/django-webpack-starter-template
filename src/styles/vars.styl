@@ -1,0 +1,43 @@
+DEBUG = false
+
+
+/* Colors */
+cms-color = #fad507
+
+primary-color = blue
+primary-dark-color = darken(primary-color, 20%)
+primary-light-color = lighten(primary-color, 20%)
+
+dark-text-color = #333
+light-text-color = #666
+
+
+/* Fonts */
+title-font = serif
+text-font = sans-serif
+
+/* Container */
+container-width = 1200px
+content-width = 960px
+
+
+/* Media queries */
+minor-breakpoint = 640px
+mid-breakpoint = 960px
+major-breakpoint = 1280px
+
+wide = '(min-width: %s)' % major-breakpoint
+desktop = '(min-width: %s) and (max-width: %s)' % (mid-breakpoint (major-breakpoint - 1))
+tablet = '(min-width: %s) and (max-width: %s)' % (minor-breakpoint (mid-breakpoint - 1))
+mobile = '(max-width: %s)' % (minor-breakpoint - 1)
+
+nonwide = '(max-width: %s)' % (major-breakpoint - 1)
+nondesktop = '%s, %s and %s' % (wide tablet mobile)
+nontablet = '%s and %s, %s' % (wide desktop mobile)
+nonmobile = '(min-width: %s)' % minor-breakpoint
+
+towide = '(max-width: %s)' % (major-breakpoint - 1)
+todesktop = '(max-width: %s)' % (mid-breakpoint - 1)
+
+fromtablet = '(min-width: %s)' % mid-breakpoint
+frommobile = '(min-width: %s)' % minor-breakpoint

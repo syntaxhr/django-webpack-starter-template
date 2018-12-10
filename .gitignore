@@ -1,0 +1,23 @@
+# OS & IDE
+.DS_Store
+.idea/
+.vscode/
+.envrc
+.direnv/
+
+# Python & Django
+*.pyc
+*.pyo
+/static/
+/media/
+locale/
+local_settings.py
+
+# Node & NPM
+node_modules/
+npm-debug.log
+
+# Build
+#dist/
+#webpack-stats.json
+#package-lock.json

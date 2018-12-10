@@ -1,0 +1,25 @@
+{
+  "status": "done",
+  "publicPath": "http://localhost:8080/",
+  "chunks": {
+    "commons": [
+      {
+        "name": "commons-33dd4b842e066270d5dd.min.js",
+        "publicPath": "http://localhost:8080/commons-33dd4b842e066270d5dd.min.js",
+        "path": "/Users/vladan/Projects/Django/django-webpack-starter-template/dist/webpack_bundles/commons-33dd4b842e066270d5dd.min.js"
+      }
+    ],
+    "main": [
+      {
+        "name": "main-33dd4b842e066270d5dd.min.js",
+        "publicPath": "http://localhost:8080/main-33dd4b842e066270d5dd.min.js",
+        "path": "/Users/vladan/Projects/Django/django-webpack-starter-template/dist/webpack_bundles/main-33dd4b842e066270d5dd.min.js"
+      },
+      {
+        "name": "main.cbc3593398daf4cff432.hot-update.js",
+        "publicPath": "http://localhost:8080/main.cbc3593398daf4cff432.hot-update.js",
+        "path": "/Users/vladan/Projects/Django/django-webpack-starter-template/dist/webpack_bundles/main.cbc3593398daf4cff432.hot-update.js"
+      }
+    ]
+  }
+}

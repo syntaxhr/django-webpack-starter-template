@@ -1,0 +1,17 @@
+{% extends 'posts/content.html' %}
+{% load cms_tags sekizai_tags menu_tags i18n el_pagination_tags static thumbnail %}
+
+{% block posts_content %}
+    <div>
+        <h1>Post list</h1>
+        <ul>
+            {% for post in posts %}
+                <li>
+                    <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock posts_content %}
+
+
